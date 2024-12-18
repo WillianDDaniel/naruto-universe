@@ -1,19 +1,17 @@
 <script>
-  import Nav from './components/Nav.vue'
-  import Header from './components/Header.vue';
+  import { RouterView } from 'vue-router';
+
   export default {
     name: 'App',
     components: {
-      Nav,
-      Header
+      RouterView
     }
   }
 </script>
 
 <template>
   <v-app>
-    <Nav />
-    <Header />
+    <RouterView />
   </v-app>
 </template>
 
