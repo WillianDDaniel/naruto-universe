@@ -1,11 +1,22 @@
 <script>
+  import { useTheme } from 'vuetify';
+
   export default {
-    name: 'Header'
+    name: 'Header',
+    setup() {
+      const theme = useTheme();
+      return { theme }
+    },
+    computed: {
+      backgroundImage() {
+        return this.theme.global.current.value.dark ? 'src/assets/bg-black.webp' : 'src/assets/bg-orange.webp';
+      }
+    }
   }
 </script>
 
 <template>
-  <v-container fluid class="v-container">
+  <v-container :style="{ backgroundImage: `url(${backgroundImage})` }" fluid>
     <v-row>
       <v-col md="6" class="text-center mt-12">
 
@@ -31,9 +42,8 @@
 
 <style scoped>
   .v-container {
-    background-image: url('../assets/bg-orange.webp');
-    background-size: cover;
     user-select: none;
+    background-size: cover;
   }
 
   .vl-div {

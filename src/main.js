@@ -13,6 +13,23 @@ const vuetify = createVuetify({
   directives,
   icons: {
     defaultSet: 'mdi'
+  },
+  theme: {
+    defaultTheme: 'light',
+    themes: {
+      light: {
+        colors: {
+          primary: '#1867C0',
+          secondary: '#5CBBF6',
+        }
+      },
+      dark: {
+        colors: {
+          primary: '#BB86FC',
+          secondary: '#03DAC5',
+        }
+      }
+    }
   }
 })
 
