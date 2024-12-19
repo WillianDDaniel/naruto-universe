@@ -24,9 +24,9 @@
     <v-img :src="imageUrl" class="ml-4" contain width="40" height="40" style="max-width: 40px; max-height: 40px;"></v-img>
     <v-toolbar-title class="font-weight-bold font-italic">Naruto Universe</v-toolbar-title>
 
-    <v-btn><RouterLink to="/">Inicio</RouterLink></v-btn>
-    <v-btn><RouterLink to="/characters">Personagens</RouterLink></v-btn>
-    <v-btn><RouterLink to="/villages">Vilas</RouterLink></v-btn>
+    <v-btn><RouterLink to="/naruto-universe/">Inicio</RouterLink></v-btn>
+    <v-btn><RouterLink to="/naruto-universe/characters">Personagens</RouterLink></v-btn>
+    <v-btn><RouterLink to="/naruto-universe/villages">Vilas</RouterLink></v-btn>
 
     <v-btn @click="toggleTheme">
       <v-icon icon='mdi-brightness-6' end></v-icon>

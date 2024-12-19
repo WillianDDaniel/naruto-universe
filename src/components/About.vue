@@ -26,7 +26,7 @@
             color="button"
             text="Explorar Personagens"
             variant="elevated"
-            @click="$router.push('/characters')"
+            @click="$router.push('/naruto-universe/characters')"
             block
           ></v-btn>
         </template>
@@ -46,7 +46,7 @@
             color="button"
             text="Descobrir Vilas"
             variant="elevated"
-            @click="$router.push('/villages')"
+            @click="$router.push('/naruto-universe/villages')"
             block
           ></v-btn>
         </template>

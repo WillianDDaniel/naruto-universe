@@ -1,5 +1,7 @@
 <script>
   import { useTheme } from 'vuetify';
+  import bgBlack from '/src/assets/bg-black.webp';
+  import bgOrange from '/src/assets/bg-orange.webp';
 
   export default {
     name: 'Header',
@@ -9,7 +11,7 @@
     },
     computed: {
       backgroundImage() {
-        return this.theme.global.current.value.dark ? 'src/assets/bg-black.webp' : 'src/assets/bg-orange.webp';
+        return this.theme.global.current.value.dark ? bgBlack : bgOrange;
       }
     }
   }
