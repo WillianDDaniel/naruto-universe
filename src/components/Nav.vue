@@ -25,7 +25,8 @@
     <v-toolbar-title class="font-weight-bold font-italic">Naruto Universe</v-toolbar-title>
 
     <v-btn><RouterLink to="/">Inicio</RouterLink></v-btn>
-    <v-btn><RouterLink to="/characters">characters</RouterLink></v-btn>
+    <v-btn><RouterLink to="/characters">Personagens</RouterLink></v-btn>
+    <v-btn><RouterLink to="/villages">Vilas</RouterLink></v-btn>
 
     <v-btn @click="toggleTheme">
       <v-icon icon='mdi-brightness-6' end></v-icon>

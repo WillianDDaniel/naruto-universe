@@ -21,13 +21,15 @@ const vuetify = createVuetify({
       light: {
         colors: {
           primary: '#1867C0',
-          secondary: '#5CBBF6',
+          secondary: '#F4511E',
+          button: '#FFB200'
         }
       },
       dark: {
         colors: {
           primary: '#BB86FC',
-          secondary: '#03DAC5',
+          secondary: '#212121',
+          button: '#F4511E'
         }
       }
     }
