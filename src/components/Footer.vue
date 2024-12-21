@@ -17,8 +17,8 @@
     <p>&copy; {{ year }} Naruto Universe. Todos os direitos reservados.</p>
 
     <div class="links">
-      <RouterLink to="/privacy">Politica de Privacidade</RouterLink>
-      <RouterLink to="/terms">Termos de Uso</RouterLink>
+      <RouterLink to="/naruto-universe/privacy">Politica de Privacidade</RouterLink>
+      <RouterLink to="/naruto-universe/terms">Termos de Uso</RouterLink>
     </div>
 
   </v-footer>
@@ -35,5 +35,10 @@
   .links {
     display: flex;
     gap: 1rem;
+  }
+
+  .links a {
+    text-decoration: none;
+    color: #fff;
   }
 </style>
