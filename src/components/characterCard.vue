@@ -1,4 +1,6 @@
 <script>
+import { RouterLink } from 'vue-router';
+
   export default {
     name: 'characterCard',
     props: {
@@ -26,7 +28,9 @@
       class="align-end"
     >
       <v-card-title class="character-name text-white">
+        <RouterLink :to="'/naruto-universe/characters/' + character.id">
         {{ character.name }}
+        </RouterLink>
       </v-card-title>
     </v-img>
 
