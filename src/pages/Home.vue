@@ -17,7 +17,7 @@
       const redirectPath = params.get('redirect');
 
       if (redirectPath) {
-        this.$router.push(redirectPath);
+        this.$router.push('/naruto-universe' + redirectPath);
       }
     }
   }
