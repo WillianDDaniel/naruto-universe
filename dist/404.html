@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0;url=/naruto-universe/" />
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var path = window.location.pathname.replace('/naruto-universe', '');
+        window.location.replace('/naruto-universe/index.html?redirect=' + encodeURIComponent(path));
+      })();
+    </script>
   </head>
   <body>
-    <script>
-      window.location.replace("/naruto-universe/");
-    </script>
+    <p>Redirecionando...</p>
   </body>
 </html>
