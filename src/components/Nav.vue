@@ -7,6 +7,7 @@
       const theme = useTheme();
       const toggleTheme = () => {
         theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark';
+        localStorage.setItem('theme', theme.global.name.value);
       };
       return { theme, toggleTheme }
     },
@@ -14,6 +15,13 @@
     data() {
       return {
         imageUrl: narutoIcon
+      }
+    },
+
+    beforeCreate() {
+      const themeColor = localStorage.getItem('theme');
+      if (themeColor) {
+        this.theme.global.name.value = themeColor;
       }
     }
   }
