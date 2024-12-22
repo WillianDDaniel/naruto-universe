@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var path = window.location.pathname.replace('/naruto-universe', '');
+        window.location.replace('/naruto-universe/?redirect=' + encodeURIComponent(path));
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecionando...</p>
+  </body>
+</html>

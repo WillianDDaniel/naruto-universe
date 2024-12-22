@@ -11,6 +11,14 @@
       Header,
       About,
       Footer,
+    },
+    beforeCreate() {
+      const params = new URLSearchParams(window.location.search);
+      const redirectPath = params.get('redirect');
+
+      if (redirectPath) {
+        this.$router.push(redirectPath);
+      }
     }
   }
 </script>

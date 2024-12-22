@@ -37,14 +37,4 @@ const vuetify = createVuetify({
   }
 })
 
-const app = createApp(App);
-
-const params = new URLSearchParams(window.location.search);
-const redirectPath = params.get('redirect');
-
-if (redirectPath) {
-  history.replaceState(null, '', '/naruto-universe/');
-  router.push(redirectPath);
-}
-
-app.use(vuetify).use(router).mount('#app');
+createApp(App).use(vuetify).use(router).mount('#app')
