@@ -28,8 +28,8 @@ import { RouterLink } from 'vue-router';
       class="align-end"
     >
       <v-card-title class="character-name text-white">
-        <RouterLink :to="'/naruto-universe/characters/' + character.id">
-        {{ character.name }}
+        <RouterLink :to="'/naruto-universe/characters/' + character.id" class="text-decoration-none text-white">
+          {{ character.name }}
         </RouterLink>
       </v-card-title>
     </v-img>
@@ -39,7 +39,7 @@ import { RouterLink } from 'vue-router';
         <v-chip color="primary" class="mr-2">
           {{ character.rank }}
         </v-chip>
-        <v-chip color="secondary">
+        <v-chip color="power">
           Power: {{ character.power }}
         </v-chip>
       </div>

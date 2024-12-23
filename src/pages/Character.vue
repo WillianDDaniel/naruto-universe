@@ -44,11 +44,12 @@ export default {
     <template v-else-if="character">
       <v-row>
         <v-col cols="6" class="d-flex flex-column align-center mt-5">
-          <h1 class="text-h4">{{ character.name }}</h1>
+          <h1 class="text-h4 mb-3">{{ character.name }}</h1>
           <img :src="character.profile_image" :alt="character.name" class="rounded" width="600">
         </v-col>
 
         <v-col cols="6" class="d-flex flex-column info-column mt-5">
+
           <h2 class="text-h4">Informações</h2>
           <v-divider class="my-2"></v-divider>
 
@@ -73,24 +74,25 @@ export default {
             </div>
 
             <div class="mt-4">
-              <span>Família:</span>
-              <div class="mt-2">
-                <p class="mb-2">
-                  <span>Pai:</span>
+              <span> <strong>Família:</strong> </span>
+              <div class="mt-1 d-flex ga-2">
+                <p>
+                  <span> <strong>Pai:</strong> </span>
                   {{ character.father?.name ? character.father.name : 'Desconhecido' }}
                 </p>
                 <p>
-                  <span>Mãe:</span>
+                  <span> <strong>Mãe:</strong> </span>
                   {{ character.mother?.name ? character.mother.name : 'Desconhecida' }}
                 </p>
               </div>
             </div>
 
-            <div class="mt-4">
-              <span>História:</span>
+            <div class="mt-4 pr-8">
+              <span> <strong>História:</strong></span>
               <p class="mt-2">{{ character.summary }}</p>
             </div>
           </div>
+
         </v-col>
       </v-row>
     </template>

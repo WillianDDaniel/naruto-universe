@@ -23,14 +23,17 @@ const vuetify = createVuetify({
           primary: '#1867C0',
           secondary: '#F4511E',
           button: '#FFB200',
-          footer: '#212121'
+          footer: '#212121',
+          power: '#FF0000'
         }
       },
       dark: {
         colors: {
           primary: '#BB86FC',
           secondary: '#212121',
-          button: '#F4511E'
+          button: '#F4511E',
+          footer: '#212121',
+          power: '#f0f0f0'
         }
       }
     }
