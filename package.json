@@ -1,7 +1,11 @@
 {
-  "name": "naruto-vue-app",
-  "private": true,
-  "version": "1.0.0",
+  "name": "naruto-universe",
+  "description": "Naruto Universe is a web application that shows information about the Naruto anime.",
+  "author": "Willian D. Daniel <williandeivitidanie@live.com>",
+  "license": "MIT",
+  "repository": "https://github.com/WillianDDaniel/naruto-universe",
+  "private": false,
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
