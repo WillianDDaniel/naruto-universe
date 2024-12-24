@@ -12,7 +12,9 @@ export default {
   },
   data() {
     return {
-      characters: []
+      characters: [],
+      filteredCharacters: [],
+      search: ''
     }
   },
   methods: {
@@ -20,10 +22,18 @@ export default {
       const response = await fetch('https://naruto-br-api.site/characters');
       const characters = await response.json();
       this.characters = characters;
+    },
+    filterCharacters() {
+      if (!this.search || this.search === '') {
+        this.filteredCharacters = this.characters;
+        return;
+      }
+      this.filteredCharacters = this.characters.filter(character => character.name.toLowerCase().includes(this.search.toLowerCase()));
     }
   },
-  mounted() {
-    this.getCharacters();
+  async mounted() {
+    await this.getCharacters();
+    this.filterCharacters();
   }
 }
 </script>
@@ -33,8 +43,15 @@ export default {
   <main>
     <v-container>
       <h1 class="text-h3 mb-6 text-center">Personagens</h1>
+      <v-text-field
+        v-model="search"
+        label="Pesquisar"
+        placeholder="Digite o nome do personagem"
+        dense
+        @input="filterCharacters"
+      ></v-text-field>
       <v-row>
-        <v-col v-for="character in characters" :key="character.id"
+        <v-col v-for="character in filteredCharacters" :key="character.id"
           cols="12" sm="6" md="4" lg="3"
         >
           <characterCard :character="character" />
