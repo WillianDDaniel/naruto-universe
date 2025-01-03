@@ -20,7 +20,7 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-  <v-card class="character-card h-100" elevation="3" hover>
+  <v-card class="character-card h-100" elevation="3" hover :to="'/naruto-universe/characters/' + character.id">
     <v-img
       :src="character.profile_image"
       height="250"
