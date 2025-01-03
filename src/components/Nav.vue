@@ -41,7 +41,8 @@
 
     <v-btn @click="toggleTheme">
       <div>
-        <v-icon icon='mdi-brightness-6' end></v-icon>
+        <v-icon v-if="theme.global.name.value === 'dark'" icon='mdi-weather-night'></v-icon>
+        <v-icon v-else icon='mdi-white-balance-sunny'></v-icon>
         <span>Tema</span>
       </div>
     </v-btn>

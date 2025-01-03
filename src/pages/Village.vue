@@ -36,9 +36,13 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="h-screen d-flex flex-column justify-between">
     <Nav />
-    <div v-if="loading" class="spinner"></div>
+
+    <v-container v-if="loading" class="d-flex justify-center align-center h-100">
+      <v-progress-circular indeterminate color="orange" size="128"></v-progress-circular>
+    </v-container>
+
     <main v-else class="d-flex flex-column align-center mb-10">
       <div  class="d-flex ga-8 py-6">
         <img :src="village.symbol" alt="" height="45">
@@ -53,7 +57,7 @@ export default {
       </div>
       <div v-if="characters.length > 0" class="mt-10">
         <h2 class="text-h4 font-weight-bold text-center mb-8">Shinobis de {{ village.name }}</h2>
-        <v-row justify="center">
+        <v-row justify="center" class="px-10">
           <v-col
             v-for="character in characters"
             :key="character.id"
@@ -64,16 +68,17 @@ export default {
               elevation="2"
               width="180"
               :hover="true"
+              :to="'/naruto-universe/characters/' + character.id"
+              image="/naruto-universe/src/assets/bga.jpg"
+              class="pt-1"
             >
-              <div>
-                <v-img
-                  v-if="character.images && character.images.length > 0"
-                  :src="character.images[0].image_url"
-                  height="180"
-                  contain
-                ></v-img>
-              </div>
-              <v-card-title class="text-subtitle-2 justify-center py-2 border-top">
+              <v-img
+                v-if="character.images && character.images.length > 0"
+                :src="character.images[0].image_url"
+                height="180"
+                contain
+              ></v-img>
+              <v-card-title class="text-subtitle-2 text-center justify-center py-2 border-top bg-secondary">
                 {{ character.name }}
               </v-card-title>
             </v-card>
