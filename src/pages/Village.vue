@@ -38,11 +38,9 @@ export default {
 <template>
   <div class="h-screen d-flex flex-column justify-between">
     <Nav />
-
     <v-container v-if="loading" class="d-flex justify-center align-center h-100">
       <v-progress-circular indeterminate color="orange" size="128"></v-progress-circular>
     </v-container>
-
     <main v-else class="d-flex flex-column align-center mb-10">
       <div  class="d-flex ga-8 py-6">
         <img :src="village.symbol" alt="" height="45">
