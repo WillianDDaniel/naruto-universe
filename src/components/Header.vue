@@ -26,7 +26,7 @@ export default {
       fluid
       class="header-container position-relative"
     >
-      <div class="gradient-overlay"></div>
+      <div :class=" theme.global.current.value.dark ? 'gradient-overlay-dark' : 'gradient-overlay-light'"></div>
       <v-row>
         <v-col md="6" class="text-center mt-12">
           <div class="vl-div">
@@ -46,9 +46,7 @@ export default {
           </div>
         </v-col>
         <v-col md="6" class="text-center">
-          <img src="../assets/naruto-characters.webp" alt="Naruto Characters"
-            class=""
-          >
+          <img src="../assets/naruto-characters.webp" alt="Naruto Characters">
         </v-col>
       </v-row>
     </v-container>
@@ -59,34 +57,16 @@ export default {
   .header-container {
     background-size: cover;
     background-position: center;
-    user-select: none;
     padding-bottom: 100px;
   }
 
-  .gradient-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.3) 40%,
-      rgba(255, 255, 255, 0.5) 60%,
-      rgba(255, 255, 255, 0.8) 80%,
-      rgba(255, 255, 255, 1) 100%
-    );
-    pointer-events: none;
-  }
-
   .text-border {
-  text-shadow:
-    -1px -1px 1px rgb(101, 101, 101),
-    1px -1px 1px rgb(101, 101, 101),
-    -1px 1px 1px rgb(101, 101, 101),
-    1px 1px 1px rgb(255, 255, 255);
-}
+    text-shadow:
+      -1px -1px 1px #fff,
+      1px -1px 1px #111,
+      1px 1px 1px #111,
+      -1px 1px 1px #fff;
+  }
 
   .vl-div {
     height: 80%;
